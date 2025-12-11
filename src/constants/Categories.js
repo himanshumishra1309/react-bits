@@ -14,7 +14,7 @@ export const NEW = [
 export const UPDATED = ['Profile Card', 'Logo Loop', 'Animated Content', 'Fade Content', 'Stack'];
 
 // Used for main sidebar navigation
-export const CATEGORIES = [
+const CATEGORIES = [
   {
     name: 'Get Started',
     subcategories: ['Introduction', 'Installation', 'MCP', 'Index']
@@ -159,3 +159,9 @@ export const CATEGORIES = [
     ]
   }
 ];
+
+CATEGORIES.forEach(cat => {
+  cat.subcategories.sort((a, b) => a.localeCompare(b));
+});
+
+export {CATEGORIES};
